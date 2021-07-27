@@ -1,6 +1,15 @@
+import React from 'react';
 import './Message.css';
 
 const Message = (props) => {
+
+	let textMessage = React.createRef();
+
+	let addMessage = () => {
+		let message = textMessage.current.value;
+		alert(message)
+	}
+
 	return (
 		<div className='message'>
 			<div className='ava'>
@@ -9,6 +18,8 @@ const Message = (props) => {
 			<div className='text' >
 				{props.message}
 			</div>
+			<textarea ref={textMessage}></textarea>
+			<button onClick={addMessage}>Post Message</button>
 		</div >
 	)
 }

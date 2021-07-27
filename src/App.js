@@ -4,7 +4,10 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Friends from './components/Friends/Friends';
+
 import { BrowserRouter, Route } from "react-router-dom";
+
+
 
 //компонента App
 function App(props) {
@@ -16,7 +19,7 @@ function App(props) {
 				<Navbar />
 				<div className='app-wrapper-content'>
 					<Route exact path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages} />} />
-					<Route exact path='/profile' render={() => <Profile data={props.state.profilePage.posts} />} />
+					<Route exact path='/profile' render={() => <Profile data={props.state.profilePage.posts} addPost={props.addPost} />} />
 					<Route exact path='/friends' render={() => <Friends />} />
 				</div>
 			</div>
