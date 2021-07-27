@@ -18,8 +18,13 @@ function App(props) {
 				<Header />
 				<Navbar />
 				<div className='app-wrapper-content'>
-					<Route exact path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages} />} />
-					<Route exact path='/profile' render={() => <Profile data={props.state.profilePage.posts} addPost={props.addPost} />} />
+					<Route exact path='/dialogs' render={() => <Dialogs
+						dialogs={props.state.dialogsPage.dialogs}
+						messages={props.state.dialogsPage.messages} />} />
+					<Route exact path='/profile' render={() => <Profile
+						profilePage={props.state.profilePage}
+						addPost={props.addPost}
+						updateNewPostText={props.updateNewPostText} />} />
 					<Route exact path='/friends' render={() => <Friends />} />
 				</div>
 			</div>
