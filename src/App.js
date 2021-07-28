@@ -23,8 +23,7 @@ function App(props) {
 						messages={props.state.dialogsPage.messages} />} />
 					<Route exact path='/profile' render={() => <Profile
 						profilePage={props.state.profilePage}
-						addPost={props.addPost}
-						updateNewPostText={props.updateNewPostText} />} />
+						dispatch={props.dispatch} />} />
 					<Route exact path='/friends' render={() => <Friends />} />
 				</div>
 			</div>
