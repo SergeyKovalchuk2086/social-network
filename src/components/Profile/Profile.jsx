@@ -6,11 +6,7 @@ function Profile(props) {
 	return (
 		<div>
 			<ProfileInfo />
-			<MyPostsContainer store={props.store}
-				// data={props.profilePage.posts}
-				// newPostText={props.profilePage.newPostText}
-				// dispatch={props.dispatch}
-			/>
+			<MyPostsContainer />
 		</div >
 	)
 };
