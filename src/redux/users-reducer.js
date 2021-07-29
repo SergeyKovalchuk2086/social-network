@@ -2,7 +2,6 @@ const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 let SET_USERS = 'SET_USERS';
 
-
 let initialState = {
 	users:
 		[

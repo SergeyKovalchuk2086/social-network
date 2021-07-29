@@ -20,8 +20,6 @@ function App(props) {
 					<Route exact path='/profile' render={() => <Profile />} />
 					<Route exact path='/friends' render={() => <Friends />} />
 					<Route exact path='/users' render={() => <UsersContainer />} />
-
-
 				</div>
 			</div>
 		</BrowserRouter>
